@@ -1,0 +1,24 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.modal {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+
+  padding: 30px;
+  width: 520px;
+  margin: 10% auto;
+
+  color: var(--text-main);
+}

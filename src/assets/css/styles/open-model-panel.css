@@ -1,0 +1,70 @@
+.open-model-panel {
+  width: 420px;
+  background: var(--bg-panel);
+  backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  color: var(--text-dark);
+}
+
+.omp-header {
+  padding: 16px 18px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.omp-search {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.omp-search input {
+  width: 100%;
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e5e7eb;
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.omp-search input::placeholder {
+  color: #9ca3af;
+}
+
+.omp-body {
+  padding: 16px 18px;
+}
+
+.omp-title {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.omp-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.omp-body li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.omp-body li:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.omp-body .count {
+  opacity: 0.6;
+  font-size: 13px;
+}

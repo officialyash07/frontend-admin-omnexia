@@ -1,0 +1,39 @@
+# Tech Stack & Introduction
+
+## Introduction
+This project is a modern, responsive Admin Dashboard built for managing various organizational resources. It serves as a centralized platform for administrators to oversee:
+- **User Management**: Creating, viewing, and managing user accounts.
+- **Job Management**: Posting, editing, and tracking job listings.
+- **Certificate Management**: Uploading, listing, and deleting certificates for candidates.
+- **General Resources**: A flexible system for managing other data models (e.g., contacts, inquiries) via a consistent interface.
+
+The application features a clean, professional user interface with a sidebar navigation, authentication (login protection), and a responsive design suitable for various screen sizes.
+
+## Technology Stack
+
+### Core Framework & Build Tool
+- **React (v19)**: The core library for building the user interface, utilizing functional components and hooks.
+- **Vite**: A fast build tool and development server that provides a smooth development experience with Hot Module Replacement (HMR).
+
+### Styling & UI
+- **Tailwind CSS (v4)**: A utility-first CSS framework used for rapid, responsive, and consistent styling throughout the application.
+- **Lucide React**: A library of beautiful, consistent icons used in the sidebar and UI elements.
+- **CSS Modules/Standard CSS**: Used for specific component styling (e.g., tables, modals) to ensure isolation and reuse.
+
+### Routing & Navigation
+- **React Router DOM (v7)**: Handles client-side routing, enabling navigation between the Login, Dashboard, and various management pages without full page reloads. Includes protection for routes requiring authentication.
+
+### State Management & Data Fetching
+- **React Hooks (useState, useEffect, useContext)**: Used for local state management and handling side effects.
+- **Context API**: Implemented (`AuthContext`) to manage global authentication state across the application.
+- **Axios**: A promise-based HTTP client used for making API requests to the backend services.
+
+### Charts & Visualization
+- **Recharts**: A composable charting library built on React components, used for displaying data visualizations on the dashboard.
+
+### Project Structure Highlights
+- **`src/components`**: Reusable UI components like `Modal`, `Sidebar`, `Navbar`, and `Card`.
+- **`src/pages`**: Main page views corresponding to routes (e.g., `Dashboard`, `Users`, `JobsManagement`).
+- **`src/layouts`**: Layout wrappers like `AdminLayout` to ensure consistent page structure.
+- **`src/context`**: Context providers for global state (Authentication).
+- **`src/services`**: API configuration and service modules.

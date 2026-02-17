@@ -1,0 +1,22 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.admin-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.admin-content {
+  padding: 60px;
+  background: transparent; /* THIS IS THE KEY */
+}
+.admin-main {
+  flex: 1;
+  background: transparent;
+  overflow-y: auto;
+}

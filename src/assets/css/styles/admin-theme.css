@@ -1,0 +1,409 @@
+/* =================================================
+   OMNEXIA ADMIN – TEAL + WHITE THEME
+   Inspired by Pixel Commerce UI
+================================================= */
+
+:root {
+  --teal-100: #134e4a; /* Darker Teal BG */
+  --teal-200: #115e59;
+  --teal-300: #2dd4bf; /* Brighter accent */
+  --teal-400: #14b8a6;
+  --teal-500: #0d9488;
+
+  --bg-main: transparent;
+  --bg-panel: rgba(30, 41, 59, 0.7); /* Glassy Slate-800 */
+  --bg-sidebar: rgba(15, 23, 42, 0.8); /* Glassy Slate-900 */
+  --bg-header: rgba(15, 23, 42, 0.8);
+
+  --text-dark: #f1f5f9; /* White/Slate-100 */
+  --text-muted: #94a3b8; /* Slate-400 */
+  --text-light: #ffffff;
+
+  --border-soft: #334155; /* Slate-700 */
+  --border-light: #334155;
+
+  --radius-lg: 16px;
+  --radius-md: 12px;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(
+    circle at 20% 10%,
+    #0b1026 0%,
+    #050816 45%,
+    #020617 100%
+  ) !important;
+  color: var(--text-dark);
+}
+
+/* =========================
+   LAYOUT FIX
+========================= */
+
+.admin-main,
+main {
+  background: transparent !important;
+}
+
+/* =========================
+   SIDEBAR (WHITE)
+========================= */
+
+.sidebar {
+  width: 250px;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-soft);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LOGO */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px 22px;
+}
+
+.sidebar-logo img {
+  width: 150px;
+  object-fit: contain;
+}
+
+/* =========================
+   SIDEBAR BUTTONS
+========================= */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: all 0.25s ease;
+}
+
+/* ICONS */
+
+.sidebar a svg {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+}
+
+/* HOVER */
+
+.sidebar a:hover {
+  background: var(--teal-200);
+}
+
+/* ACTIVE BUTTON */
+
+.sidebar a.active {
+  background: var(--teal-400);
+  color: #064e3b;
+  font-weight: 600;
+}
+
+/* =========================
+   NAVBAR (TOP WHITE BAR)
+========================= */
+
+.navbar {
+  height: 64px;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  backdrop-filter: blur(10px);
+}
+
+.navbar h1,
+.navbar h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.navbar button {
+  background: #ef4444;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN BACKGROUND
+========================= */
+
+.dashboard,
+.dashboard-inner {
+  background: transparent;
+}
+
+/* =========================
+   OPEN MODEL PANEL (CARD)
+========================= */
+
+.open-model-panel {
+  width: 360px;
+  background: rgba(30, 41, 59, 0.6) !important;
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  color: var(--text-dark);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* TITLE */
+
+.open-model-panel h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* SEARCH */
+
+.open-model-panel input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #064e3b;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   MODEL LIST
+========================= */
+
+.model-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.model-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.model-item:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.model-item span:last-child {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 210px;
+  }
+
+  .open-model-panel {
+    width: 100%;
+  }
+}
+/* ================================
+   SIDEBAR BUTTONS – FINAL FIX
+================================ */
+
+/* ================================
+   SIDEBAR BUTTONS – DARK FIX
+   ================================ */
+
+.sidebar {
+  background: var(--bg-sidebar) !important;
+  padding: 18px 14px;
+}
+
+/* Container */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* BUTTON BASE */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 16px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-soft);
+
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  box-shadow: none;
+  transition: all 0.25s ease;
+}
+
+/* ICON */
+.sidebar a svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+  color: var(--text-muted);
+}
+
+/* HOVER = BUTTON LIFT */
+.sidebar a:hover {
+  background: rgba(20, 184, 166, 0.1); /* Teal tint */
+  border-color: var(--teal-400);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: var(--teal-300);
+}
+
+/* ACTIVE BUTTON */
+.sidebar a.active {
+  background: linear-gradient(135deg, var(--teal-500), var(--teal-400));
+  color: #ffffff;
+  border-color: transparent;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
+}
+
+/* ACTIVE ICON */
+.sidebar a.active svg {
+  color: #ffffff;
+}
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--teal-500),
+    var(--teal-400)
+  ) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.4) !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.6) !important;
+  background: linear-gradient(
+    135deg,
+    var(--teal-400),
+    var(--teal-300)
+  ) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 10px rgba(20, 184, 166, 0.3) !important;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid var(--border-soft) !important;
+  border-radius: 12px !important;
+  color: var(--text-dark) !important;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.form-input:focus {
+  border-color: var(--teal-400) !important;
+  background: rgba(15, 23, 42, 0.8) !important;
+  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.1) !important;
+}
+
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.file-input-wrapper input[type="file"] {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.file-input-wrapper input[type="file"]::file-selector-button {
+  margin-right: 16px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: var(--text-dark);
+  cursor: pointer;
+  border: 1px solid var(--border-soft);
+  transition: all 0.2s;
+}
+
+.file-input-wrapper input[type="file"]::file-selector-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--teal-400);
+  color: var(--teal-300);
+}

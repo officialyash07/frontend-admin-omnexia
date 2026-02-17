@@ -1,0 +1,105 @@
+/* ================================
+   GLOBAL TABLE FIX (FOR ALL PAGES)
+   ================================ */
+
+/* Page padding */
+.table-page {
+  padding: 24px;
+}
+
+/* WHITE CARD -> DARK CARD */
+.table-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+  backdrop-filter: blur(12px);
+}
+
+/* TABLE BASE */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+/* HEADER */
+.admin-table thead th {
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--teal-300); /* Accent Color Header */
+  font-weight: 600;
+  padding: 10px 12px;
+  border: 1px solid var(--border-soft);
+  text-align: center;
+}
+
+/* BODY CELLS */
+.admin-table td {
+  background: transparent;
+  color: var(--text-dark); /* Light Text */
+  padding: 10px 12px;
+  border: 1px solid var(--border-soft);
+  text-align: center;
+}
+
+/* ROW HOVER */
+.admin-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ACTION BUTTONS */
+.admin-table button {
+  background: var(--teal-500);
+  color: #ffffff;
+  border: none;
+  padding: 4px 10px;
+  margin: 0 4px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.admin-table button:hover {
+  background: var(--teal-400);
+}
+/* 🚨 DARK MODE TABLE FIXES 🚨 */
+
+/* FORCE TABLE BACKGROUND */
+table {
+  background-color: transparent !important;
+  color: var(--text-dark) !important;
+}
+
+/* FORCE HEADER */
+table th {
+  background-color: rgba(30, 41, 59, 1) !important; /* Dark Slate Header */
+  color: var(--text-dark) !important;
+  border: 1px solid var(--border-soft) !important;
+  padding: 12px 16px !important;
+}
+
+/* FORCE CELLS */
+table td {
+  background-color: transparent !important;
+  color: var(--text-dark) !important;
+  border: 1px solid var(--border-soft) !important;
+  padding: 12px 16px !important;
+}
+
+/* ROW HOVER */
+table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+table button {
+  background: var(--teal-500) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 5px !important;
+}

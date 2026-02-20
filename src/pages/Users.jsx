@@ -21,6 +21,8 @@ export default function Users() {
     role: "viewer",
   });
 
+  const [error, setError] = useState("");
+
   const { user } = useAuth();
 
   const fetchUsers = async () => {
@@ -46,10 +48,15 @@ export default function Users() {
 
   const createUser = async (e) => {
     e.preventDefault();
-    await api.post("/models/user", form);
-    setForm({ name: "", email: "", password: "", role: "viewer" });
-    setShowAddModal(false);
-    fetchUsers();
+    try {
+      await api.post("/models/user", form);
+      setForm({ name: "", email: "", password: "", role: "viewer" });
+      setShowAddModal(false);
+      fetchUsers();
+      setError("");
+    } catch (error) {
+      setError(error.response?.data?.message || error.response?.data || "An error occurred");
+    }
   };
 
   const openEditModal = (u) => {
@@ -77,7 +84,10 @@ export default function Users() {
         {user.role === "admin" && (
           <div style={{ marginBottom: "24px" }}>
             <button
-              onClick={() => setShowAddModal(true)}
+              onClick={() => {
+                setShowAddModal(true);
+                setError("");
+              }}
               className="btn-primary"
             >
               <svg
@@ -320,6 +330,8 @@ export default function Users() {
                 </div>
               </div>
             </div>
+
+            {error && <p style={{ color: 'red', marginBottom: 16 }}>{error}</p>}
 
             <div
               style={{
